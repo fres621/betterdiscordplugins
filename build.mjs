@@ -1,6 +1,8 @@
 import esbuild from "esbuild";
-import { readdir, readFile, writeFile } from "fs/promises";
+import { readdir, readFile, writeFile, mkdir } from "fs/promises";
 import { join } from "path";
+
+await mkdir('dist').catch(() => { });
 
 function manifestMetaPlugin(manifest) {
     let res = `/**\n`;
