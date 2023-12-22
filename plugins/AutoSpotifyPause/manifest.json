@@ -1,0 +1,10 @@
+{
+    "entrypoint": "AutoSpotifyPause.plugin.tsx",
+    "meta": {
+        "name": "AutoSpotifyPause",
+        "author": "fres621",
+        "authorId": "843448897737064448",
+        "version": "1.0.0",
+        "description": "Automatically pause Spotify when you play media files on Discord"
+    }
+}
