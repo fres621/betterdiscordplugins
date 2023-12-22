@@ -6,7 +6,7 @@ on:
             - 'main'
 
 jobs:
-    run-linters:
+    build-plugins:
         name: Build plugins
         runs-on: ubuntu-latest
 
@@ -26,5 +26,11 @@ jobs:
             - name: Install Node.js dependencies
               run: pnpm install
 
-            - name: Run linters
+            - name: Build plugins
               run: pnpm run build
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./dist
