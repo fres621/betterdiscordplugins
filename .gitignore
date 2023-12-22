@@ -1,4 +1,4 @@
 node_modules/
 
-# GitHub actions should build the plugins
+# GitHub actions will build the plugins
 dist/
